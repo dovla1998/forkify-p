@@ -8,7 +8,6 @@ class RecipeView extends View {
   _successMessage;
 
   addHandlerRender(handler) {
-    //Kada je više evenata na istom elementu(windows), može se preko arraya skratiti da se ne piše posebno za svaki
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
   }
 

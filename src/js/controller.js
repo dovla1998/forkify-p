@@ -10,7 +10,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
-//Dohvat sa API
+//API
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -43,7 +43,6 @@ const searchResults = async function () {
     await model.loadSearchResults(query);
 
     //Render results
-    // resultsView.render(model.state.search.results);
     resultsView.render(model.getSearchResultsPage());
 
     //Render pages buttons
@@ -54,7 +53,7 @@ const searchResults = async function () {
 };
 
 const pagination = function (goToPage) {
-  //NEW PAGE resultsView.render(model.state.search.results);
+  //NEW PAGE
   resultsView.render(model.getSearchResultsPage(goToPage));
 
   //NEW PAGE Render pages buttons
@@ -66,7 +65,6 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 
   //Update view
-  // recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
@@ -87,7 +85,6 @@ const controlBookmarks = function () {
 };
 
 const controlAddRecipe = async function (newRecipe) {
-  // console.log(newRecipe);
   try {
     //Spinner
     addRecipeView.renderSpinner();

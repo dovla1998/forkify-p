@@ -1,4 +1,4 @@
-//Podaci/varijable koje se ne mijenjaju nikako u projektu
+//Static variables and data
 
 export const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';
 export const API_KEY = '438b22d3-4ef5-46b0-abf4-412a5719bd9c';
